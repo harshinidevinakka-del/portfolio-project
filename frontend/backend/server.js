@@ -5,12 +5,7 @@ require('dotenv').config()
 
 const app = express()
 
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://portfolio-project-r41w08gqx-nakka-harshini-devi-s-projects.vercel.app',
-  ]
-}))
+app.use(cors({ origin: '*' }))
 app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URI)
